@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <style>
+        .sidebar {
+            width: 15%;
+            float: left;
+        }
+        .content {
+            width: 85%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            {% for chapter in site.book %}
+                <li><a href="{{ chapter.url }}">{{ chapter.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="content">
+        {{ content }}
+    </div>
+</body>
+</html>
